@@ -1,8 +1,6 @@
 # Resumo do Projeto
 Este projeto é um sistema de cadastro de usuários que permite a integração de vários tipos de dados.
 
-Para iniciar o projeto: ng serve (frontend) e rodar a aplicação no Spring Boot (backend)
-
 # Tecnologias utilizadas
 
 Frontend: O sistema utiliza Angular para criar uma interface de usuário interativa e responsiva.
