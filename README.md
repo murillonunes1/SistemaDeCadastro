@@ -19,10 +19,22 @@ Este projeto visa fornecer uma solução completa para a gestão de usuários, c
 
 Débitos técnicos: o servidor de aplicação utilizado no projeto foi o Tomcat, pois o mesmo possui uma integração direta com o Spring Java. Caso haja uma necessidade futura de recursos mais avançados, pode-se reconsiderar o uso de outros servidores de aplicação como o Wildfly.
 
-# Interface
+# Interface Front-end
 
 ![Sem título3](https://github.com/user-attachments/assets/7a99d717-62bf-42e7-8a09-e9cf2c904ccc)
 ![Sem título2](https://github.com/user-attachments/assets/ccd6c17c-33ff-4fe4-9b8d-9e385aa48ab1)
+
+# Aplicação Back-end
+
+![Sem título](https://github.com/user-attachments/assets/c6353131-285f-438a-8a4e-81bba97067de)
+
+# Vizualização de dados
+
+![Sem título4](https://github.com/user-attachments/assets/9d9c2853-2637-4f32-a8d4-f505a38d6f1a)
+
+
+
+
 
 
 
