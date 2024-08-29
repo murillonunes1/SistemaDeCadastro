@@ -30,7 +30,8 @@ Débitos técnicos: o servidor de aplicação utilizado no projeto foi o Tomcat,
 
 # Vizualização de dados
 
-![Sem título4](https://github.com/user-attachments/assets/9d9c2853-2637-4f32-a8d4-f505a38d6f1a)
+![Sem título4](https://github.com/user-attachments/assets/5cb28595-4aab-4781-9247-c4c4f8316e28)
+
 
 
 
