@@ -1,0 +1,190 @@
+<div class="container">
+  <div class="row pt-3">
+    <div class="col-6">
+      <h5>Registro de usuários</h5>
+    </div>
+    <div class="col-6 text-end">
+         <button class="btn btn-outline-success" (click)="openModel()">Adicionar novo usuário</button>
+      </div>
+  </div>
+
+    @if (studentList.length !== 0) {
+      <div class="row" >
+
+        @for (item of studentList; track $index) {
+    
+          <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+                  <div class="row">
+                    <div class="col-6">
+                      {{item.nome}}
+                    </div>
+                    <div class="col-6 text-end">
+                      {{item.telefone}}
+                    </div>
+                  </div>
+           
+            <div class="card-body">
+               <p>{{item.cidade}}, {{item.estado}} , {{item.cep}}</p>
+               <p>{{item.endereco}}</p>
+               <p>{{item.departamento.departamento}}</p>
+            </div>
+            
+          </div>
+            <div class="card-footer text-center">
+            <div class="row">
+              <div class="col-6">
+              {{item.email}}
+              </div>
+                <div class="col-6">
+                  <button class="btn btn-sm btn-primary" (click)="onEdit(item)" >Editar</button>
+                  <button class="btn btn-sm btn-danger" (click)="onDelete(item)" >Deletar</button>
+                  <button class="btn btn-sm btn-success" (click)="openDetails(item)" >Detalhes</button>
+                </div>
+          </div>
+    
+        </div>
+      
+           </div>
+           <br>
+          </div>
+        } 
+      </div>
+    } @else {
+      <div class="row">
+        <div class="col-12 p-4 text-center">
+           <p>Nenhum usuário encontrado. Crie um novo usuário</p>
+        </div>
+      </div>
+    }
+  
+</div>
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Criar novo usuário</h5>
+        <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"  (click)="closeModel()"></button>
+      </div>
+
+      <div class="modal-body">
+          <div class="row">
+
+            <div class="col-8">
+              <label for="">Nome</label>
+              <input type="text" [(ngModel)]="studentObj.nome" class="form-control" placeholder="Nome">
+           </div>
+
+           <div class="col-6">
+            <label for="">Telefone</label>
+            <input type="text" [(ngModel)]="studentObj.telefone" class="form-control" placeholder="Telefone">
+         </div>
+
+         <div class="col-6">
+          <label for="">Email</label>
+          <input type="text" class="form-control" [(ngModel)]="studentObj.email" placeholder="Email">
+         </div>
+
+         <div class="col-4">
+          <label for="">Cidade</label> 
+          <input type="text" class="form-control" [(ngModel)]="studentObj.cidade" placeholder="Cidade">
+         </div>
+
+         <div class="col-4">
+          <label for="">Estado</label>
+          <input type="text" class="form-control" [(ngModel)]="studentObj.estado" placeholder="Estado">
+         </div>
+
+         <div class="col-4">
+          <label for="">Cep</label>
+          <input type="text" class="form-control" [(ngModel)]="studentObj.cep" placeholder="Cep">
+         </div>
+         <div class="col-6">
+          <label for="">Departamento</label>
+          <select class="form-control" [(ngModel)]="studentObj.departamento.departamento">
+            <option value="TI">TI</option>
+            <option value="RH">RH</option>
+            <option value="Finanças">Finança</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Vendas">Vendas</option> 
+            <option value="Operações">Operações</option>  
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+          <div class="row">
+            <div class="col-12">
+              <label for="">Endereço</label>
+              <textarea rows="3" class="form-control" [(ngModel)]="studentObj.endereco"></textarea>
+            </div>
+          </div>
+       
+         </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="closeModel()">Fechar</button>
+        @if (studentObj.id == 0) {
+          <button type="button" class="btn btn-primary"  (click)="saveStudent()">Salvar usuário</button>
+        } @else {
+          <button type="button" class="btn btn-success"  (click)="updateStud()">Atualizar usuário</button>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalhes</h5>
+          <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"  (click)="closeModel2()" ></button>
+        </div>
+  
+        <div class="modal-body">
+            <div class="row">
+  
+              <div class="col-8">
+                <label for="">Nome</label>
+                <input type="text" [(ngModel)]="studentObj.nome" class="form-control" placeholder="Nome" readonly>
+             </div>
+
+             <div class="col-6">
+              <label for="">Telefone</label>
+              <input type="text" [(ngModel)]="studentObj.telefone" class="form-control" placeholder="Telefone" readonly>
+           </div>
+
+           <div class="col-6">
+            <label for="">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="studentObj.email" placeholder="Email" readonly>
+           </div>
+  
+           <div class="col-4">
+            <label for="">Cidade</label> 
+            <input type="text" class="form-control" [(ngModel)]="studentObj.cidade" placeholder="Cidade" readonly>
+           </div>
+  
+           <div class="col-4">
+            <label for="">Estado</label>
+            <input type="text" class="form-control" [(ngModel)]="studentObj.estado" placeholder="Estado" readonly>
+           </div>
+  
+           <div class="col-4">
+            <label for="">Cep</label>
+            <input type="text" class="form-control" [(ngModel)]="studentObj.cep" placeholder="Cep" readonly>
+           </div>
+
+           <div class="col-4">
+            <label for="">Departamento</label>
+            <input type="text" class="form-control" [(ngModel)]="studentObj.departamento.departamento" placeholder="Departamento" readonly>
+            </div>
+
+            <div class="col-12">
+              <label for="">Endereço</label>
+              <input type="text" class="form-control" [(ngModel)]="studentObj.endereco" readonly>
+              </div>
+
+          </div>
+      </div>
