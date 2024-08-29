@@ -17,4 +17,10 @@ Visualização de Dados: DBeaver é utilizado para visualização e administraç
 
 Este projeto visa fornecer uma solução completa para a gestão de usuários, combinando uma interface moderna, um backend robusto, e um gerenciamento eficiente de dados.
 
-Débitos técnicos: o servidor de aplicação utilizado no projeto foi o Tomcat, pois o mesmo possui uma integração direta com o Spring Java. Caso haja uma necessidade futura de recursos mais avançados, pode-se reconsiderar o uso de outros servidores de aplicação como o Wildfly. 
+Débitos técnicos: o servidor de aplicação utilizado no projeto foi o Tomcat, pois o mesmo possui uma integração direta com o Spring Java. Caso haja uma necessidade futura de recursos mais avançados, pode-se reconsiderar o uso de outros servidores de aplicação como o Wildfly.
+
+# Interface
+
+![Sem título3](https://github.com/user-attachments/assets/ebccefec-fbee-420f-8638-37109327fe34)
+![Sem título2](https://github.com/user-attachments/assets/f41c9712-1299-4d1d-a1f6-c1a7067fd13c)
+
