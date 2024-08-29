@@ -7,11 +7,11 @@ Frontend: O sistema utiliza Angular para criar uma interface de usuário interat
 
 Backend: O Java com Spring Boot é empregado para construir o backend, oferecendo uma API robusta e eficiente.
 
+IDE: O desenvolvimento do backend foi realizado no IntelliJ IDEA.
+
 Banco de Dados: PostgreSQL é usado como banco de dados relacional para armazenar e gerenciar os dados dos usuários.
 
 Gerenciamento de Banco de Dados: Docker é utilizado para gerenciar o ambiente do banco de dados, facilitando a configuração e a execução.
-
-IDE: O desenvolvimento do backend foi realizado no IntelliJ IDEA.
 
 Visualização de Dados: DBeaver é utilizado para visualização e administração do banco de dados PostgreSQL.
 
