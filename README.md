@@ -1,5 +1,5 @@
 # Resumo do Projeto
-## Este projeto é um sistema de cadastro de usuários que permite a integração de vários tipos de dados.
+Este projeto é um sistema de cadastro de usuários que permite a integração de vários tipos de dados.
 
 # Tecnologias utilizadas
 
